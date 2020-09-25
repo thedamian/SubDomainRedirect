@@ -10,6 +10,7 @@ One installed and running simply go to any subdomain.yourDomain.com/newUrl and o
 - `git pull` 
 - `npm i`
 - Edit the auth.js and change the `username` and `password` to valid entries for you.
-- `npm run dev` for testing
+- `node SubDomainRedirect.js` for testing
 - Go to `http://localhost:5008/newUrl` to acces your admin panel
+- Don't go to the root if you're using localhost (it'll crash), but normally if you go to SomethingWrong.YourDomain.com it'll redirect to YourDomain.com (with localhost it doesn't work)
 - Enjoy!
