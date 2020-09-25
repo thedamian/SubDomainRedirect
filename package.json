@@ -1,0 +1,35 @@
+{
+  "name": "SubDomainRedirect",
+  "version": "1.0.0",
+  "description": "subdomain redirect",
+  "main": "SubDomainRedirect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --ignore redirects.json",
+    "start": "node SubDomainRedirect.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedamian/SubDomainRedirect.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "express-slow-down": "^1.3.1",
+    "helmet": "^3.22.0",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.15",
+    "yup": "^0.29.1"
+  },
+  "bugs": {
+    "url": "https://github.com/thedamian/SubDomainRedirect/issues"
+  },
+  "homepage": "https://github.com/thedamian/SubDomainRedirect#readme"
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+          <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css'>
+    <title>Add new subdomain redirect</title>
+</head>
+<body>
+<style>
+    input:not([type=checkbox]):not([type=radio]) {
+        display:inline-block;
+    }
+</style>
+
+    <form action="/newUrl" method="POST">
+        <input class="input" type="text"  name="host" id="host" placeholder="enter a host" /><BR />
+        <input class="input" type="text"  name="redirect" size="80" id="redirect" placeholder="enter a redirect url " /> 
+        <input class="input" type="submit" value="Add" />
+    </form>
+<hr>
+    <% for (let i=0;i<redirects.length;i++) { %>
+        <form action="/newUrl" method="POST">
+            <input class="input" type="text"  name="host" id="host" placeholder="enter a host" value="<%= redirects[i].host %>" />  <a href="/newUrl/<%= redirects[i].id %>">X</a><BR />
+            <input class="input" type="text"  name="redirect"  size="80" id="redirect" placeholder="enter a redirect url"  value="<%= redirects[i].redirect %>" />
+            <input class="input" type="submit" value="Update" />
+        </form> 
+        <HR>
+    <% } %>
+
+</body>
+</html>
